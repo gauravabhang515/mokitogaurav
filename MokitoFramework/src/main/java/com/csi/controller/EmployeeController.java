@@ -71,4 +71,11 @@ public class EmployeeController {
     public ResponseEntity<List<Employee>> sortByName(){
         return ResponseEntity.ok(employeeServiceImpl.getAllData().stream().sorted(Comparator.comparing(Employee::getEmpName)).collect(Collectors.toList()));
     }
+
+    @GetMapping("/sayhello")
+    public ResponseEntity<String> sayhello(  ) {
+
+
+        return ResponseEntity.ok("hello,......................");
+    }
 }
